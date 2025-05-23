@@ -1,0 +1,12 @@
+name: 2. Workflow (just to test enabling)
+on:
+  workflow_dispatch:
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+    - name: echo
+      run: |
+        echo "Test"

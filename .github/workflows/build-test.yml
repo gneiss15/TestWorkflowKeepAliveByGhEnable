@@ -1,0 +1,14 @@
+name: Test keep alive by Gh Enable
+on:
+  workflow_dispatch:
+  push:
+  schedule:
+    - cron: '0 0 1 * *' # Use a schedule that runs at least every 59 Days
+jobs:
+  workflow-keepalive:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+    - name: keepalive
+      uses: gneiss15/WorkflowKeepAliveByGhEnable@v1
